@@ -10,7 +10,7 @@ import (
 	"testing"
 )
 
-//操蛋
+//操蛋v1.1.1
 func BenchmarkNewStorage(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		storage:= NewStorage()
