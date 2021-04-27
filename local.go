@@ -49,7 +49,7 @@ func (a *Local) GetObjectToFile() {
 }
 
 func (a *Local) PutObjectFromFile(filePath string, uploadFile *ghttp.UploadFile) (filePathName string, err error) {
-	g.Dump(filePath)
+	
 	if !gfile.Exists(filePath) {
 
 		if err = gfile.Mkdir(filePath); err != nil {
