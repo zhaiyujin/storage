@@ -21,11 +21,7 @@ var serverRoot string
 
 func NewStorage() Storager {
 
-	if driver != g.Cfg().GetString("storage.driver", "local") {
-		s=nil
-	}
 
-	once.Do(func() {
 		var err error
 		//s = &Storager{}
 		driver = g.Cfg().GetString("storage.driver", "local")
@@ -48,6 +44,5 @@ func NewStorage() Storager {
 			}
 		}
 
-	})
-	return s
+		return s
 }

@@ -30,7 +30,9 @@ type ossConfig struct {
 }
 
 func NewAliOss() (ali Storager, err error) {
-	return (&AliOss{}).Init()
+
+		return (&AliOss{}).Init()
+
 }
 
 func (a *AliOss) Init() (ali Storager, err error) {
