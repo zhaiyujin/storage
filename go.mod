@@ -1,4 +1,4 @@
-module storage
+module github.com/zhaiyujin/storage
 
 go 1.15
 

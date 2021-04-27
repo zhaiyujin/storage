@@ -10,7 +10,7 @@ import (
 	"github.com/gogf/gf/os/gfile"
 	"sync"
 )
-
+//storage
 type Storage struct {
 }
 
