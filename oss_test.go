@@ -10,6 +10,9 @@ import (
 	"testing"
 )
 
+/**
+真曹丹
+ */
 func BenchmarkNewStorage(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		_, err := NewStorage()
