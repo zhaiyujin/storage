@@ -11,5 +11,5 @@ type Storager interface {
 	Init() (ali Storager, err error)
 	GetObjectToFile()
 	PutObjectFromFile(filePath string, file *ghttp.UploadFile) (filePathName string, err error) //上传
-
+	GetUrl(filename string) string
 }

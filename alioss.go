@@ -63,6 +63,9 @@ func (a *AliOss) Init() (ali Storager, err error) {
 	}, nil
 
 }
+func (a *AliOss) GetUrl(fileName string) string {
+	return a.config.Url + "/" + fileName
+}
 
 func (a *AliOss) GetObjectToFile() {
 	fmt.Println("ceshi ali")

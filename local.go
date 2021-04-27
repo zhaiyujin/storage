@@ -47,6 +47,9 @@ func (a *Local) Init() (s Storager, err error) {
 func (a *Local) GetObjectToFile() {
 	fmt.Println("ceshi local")
 }
+func (a *Local) GetUrl(fileName string) string {
+	return a.config.Url + "/" + fileName
+}
 
 func (a *Local) PutObjectFromFile(filePath string, uploadFile *ghttp.UploadFile) (filePathName string, err error) {
 
@@ -78,7 +81,7 @@ func (a *Local) PutObjectFromFile(filePath string, uploadFile *ghttp.UploadFile)
 		return "", err
 	}
 	defer newFile.Close()
-	fmt.Println(gfile.Join(serverRoot, filePathName))
+
 	//glog.Printf(`save upload file: %s`, filePathName)
 	if _, err := io.Copy(newFile, file); err != nil {
 		return "", err
