@@ -49,7 +49,7 @@ func (a *Local) GetObjectToFile() {
 }
 
 func (a *Local) PutObjectFromFile(filePath string, uploadFile *ghttp.UploadFile) (filePathName string, err error) {
-	
+
 	if !gfile.Exists(filePath) {
 
 		if err = gfile.Mkdir(filePath); err != nil {
@@ -78,6 +78,7 @@ func (a *Local) PutObjectFromFile(filePath string, uploadFile *ghttp.UploadFile)
 		return "", err
 	}
 	defer newFile.Close()
+	fmt.Println(gfile.Join(serverRoot, filePathName))
 	//glog.Printf(`save upload file: %s`, filePathName)
 	if _, err := io.Copy(newFile, file); err != nil {
 		return "", err

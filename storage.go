@@ -10,6 +10,7 @@ import (
 	"github.com/gogf/gf/os/gfile"
 	"sync"
 )
+
 //storage
 type Storage struct {
 }
@@ -21,28 +22,26 @@ var serverRoot string
 
 func NewStorage() Storager {
 
-
-		var err error
-		//s = &Storager{}
-		driver = g.Cfg().GetString("storage.driver", "local")
-		serverRoot = gfile.Join(g.Cfg().GetString("server.serverRoot"), "/")
-
-		switch driver {
-		case "alioss":
-			if s, err = NewAliOss(); err != nil {
-				panic(err.Error())
-			}
-			break
-		case "aws":
-		case "local":
-			if s, err = NewLocalFile(); err != nil {
-				panic(err.Error())
-			}
-		default:
-			if s, err = NewLocalFile(); err != nil {
-				panic(err.Error())
-			}
+	var err error
+	//s = &Storager{}
+	driver = g.Cfg().GetString("storage.driver", "local")
+	serverRoot = gfile.Join(g.Cfg().GetString("storage.local.root", "upload"), "/")
+	switch driver {
+	case "alioss":
+		if s, err = NewAliOss(); err != nil {
+			panic(err.Error())
 		}
+		break
+	case "aws":
+	case "local":
+		if s, err = NewLocalFile(); err != nil {
+			panic(err.Error())
+		}
+	default:
+		if s, err = NewLocalFile(); err != nil {
+			panic(err.Error())
+		}
+	}
 
-		return s
+	return s
 }
