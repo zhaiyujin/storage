@@ -1,0 +1,18 @@
+# HTTP Server.
+[storage]
+    driver =    "alioss"
+[storage.local]
+    root    =   "upload"
+    url = "http://192.168.0.126:8199/upload"
+[storage.alioss]
+    accessId    =   ""
+    accessKey   =   ""
+    bucket  =   ""
+    endpoint    =   ""
+    endpointInternal    =   ""
+    cdnDomain   =   ""
+    ssl =   true
+    url =   ""
+
+
+
