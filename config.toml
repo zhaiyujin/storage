@@ -5,14 +5,14 @@
     root    =   "upload"
     url = "http://192.168.0.126:8199/upload"
 [storage.alioss]
-    accessId    =   "LTAI4GLAFf8cKEKoCYYrvJY9"
-    accessKey   =   "qjKW6wxofEwFZSo6W6pvO4BOKtN9MC"
-    bucket  =   "healthy-community"
-    endpoint    =   "oss-cn-beijing.aliyuncs.com"
-    endpointInternal    =   "<internal endpoint [OSS内网节点] 如：oss-cn-shenzhen-internal.aliyuncs.com>"
-    cdnDomain   =   "https://spotshop.oss-cn-hangzhou.aliyuncs.com"
+    accessId    =   ""
+    accessKey   =   ""
+    bucket  =   ""
+    endpoint    =   ""
+    endpointInternal    =   ""
+    cdnDomain   =   ""
     ssl =   true
-    url =   "https://healthy-community.oss-cn-beijing.aliyuncs.com"
+    url =   ""
 
 
 
